@@ -84,8 +84,8 @@ def get_exchange_rate_task_factory(
         ),
         do_xcom_push=True,
         data={
-            "base": "{{ var.json.get('exchangerate.base', 'BTC') }}",
-            "symbols": "{{ var.json.get('exchangerate.symbols', 'USD') }}"
+            "base": "{{ var.value.get('exchangerate.base', 'BTC') }}",
+            "symbols": "{{ var.value.get('exchangerate.symbols', 'USD') }}"
         },
         headers={
             "accept": "application/json",
